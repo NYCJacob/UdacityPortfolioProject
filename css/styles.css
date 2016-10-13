@@ -1,0 +1,42 @@
+
+/* zocial */
+[class*="zocial-"]:before {
+    font-family: 'zocial', sans-serif;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+body{
+    margin: 5em;
+}
+
+header{
+    font-family: "Roboto", sans-serif;
+    border-bottom: .5em solid #7d97ad;
+}
+
+footer{
+    border-top: .5em solid #7d97ad;
+}
+
+header h1{
+    margin-top: 0;
+}
+
+svg{
+    height: 5em;
+}
+
+.landing-page{
+    max-width:960px;
+}
+
+.splash-image{
+    padding-top: 1em;
+}
+
+.job-title {
+    margin-top: 0;
+}
+
+
