@@ -51,40 +51,51 @@
         </header>
     </div>
     <section class="row">
-        <figure>
             <picture id="banner-image" class="col-xs-12">
-                <source media="(min-width: 750px)" srcset="images/website-html-1600_large_2x.jpg, images/website-html-800_large_1x.jpg" />
-                <source media="(min-width: 500px)" srcset="images/webiste-html-medium.jpg">
-                <img class="center-block splash-image" src="imagesSrc/website-html_small.jpg" alt="html code picture">
+                <source class="col-lg-12" media="(min-width: 800px)" sizes="100vw" srcset="images/website-html-large_2x 1020w,
+                                                                                images/website-html-large.jpg 640w" />
+                <source class="col-lg-12" media="(max-width: 799px)" sizes="100vw" srcset="images/website-html-sm.jpg 160w,
+                                        images/website-html-med.jpg 320w, images/website-html-large.jpg 640w" />
+                <img src="images/website-html-sm.jpg" alt="html code picture" sizes="(max-width: 480px) 100vw, (min-width: 800px) 66vw, (min-width: 1900px) 50vw" srcset="images/website-html-sm.jpg 160w, images/website-html-med.jpg 320w, images/website-html-large.jpg 640w"/>
             </picture>
-            <figcaption>Let me tame the matrix for you and free your mind.</figcaption>
-        </figure>
 
-    </section>
-    <!--featured items-->
-    <section class="row">
+        <!--<picture>-->
+            <!--<source media="(min-width: 800px)"-->
+                    <!--sizes="80vw"-->
+                    <!--srcset="lighthouse-landscape-640.jpg 640w,-->
+                  <!--lighthouse-landscape-1280.jpg 1280w,-->
+                  <!--lighthouse-landscape-2560.jpg 2560w">-->
+            <!--<img src="lighthouse-160.jpg" alt="lighthouse"-->
+                 <!--sizes="80vw"-->
+                 <!--srcset="lighthouse-160.jpg 160w,-->
+               <!--lighthouse-320.jpg 320w,-->
+               <!--lighthouse-640.jpg 640w,-->
+               <!--lighthouse-1280.jpg 1280w">-->
+        <!--</picture>-->
+
         <div class="col-xs-12">
             <h3>Featured Work</h3>
         </div>
-            <div class="col-md-4">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="imagesSrc/business-03.jpg" alt="business meeting image">
-                </a>
-                <h2>Business</h2>
-            </div>
-            <div class="col-md-4">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="imagesSrc/technics-01.jpg" alt="technology image">
-                </a>
-                <h2>Technology</h2>
-            </div>
-            <div class="col-md-4">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="imagesSrc/nature-02.jpg" alt="flower picture">
-                </a>
-                <h2>Photography</h2>
-            </div>
+        <div class="col-md-4">
+            <a href="#">
+                <img class="img-responsive portfolio-item" src="images/business-03.jpg" alt="business meeting image">
+            </a>
+            <h2>Business</h2>
+        </div>
+        <div class="col-md-4">
+            <a href="#">
+                <img class="img-responsive portfolio-item" src="images/technics-01.jpg" alt="technology image">
+            </a>
+            <h2>Technology</h2>
+        </div>
+        <div class="col-md-4">
+            <a href="#">
+                <img class="img-responsive portfolio-item" src="images/nature-02.jpg" alt="flower picture">
+            </a>
+            <h2>Photography</h2>
+        </div>
     </section>
+
     <footer class="row">
         <div class="col-md-4">Copyright © 2016 Jacob Sherman</div>
         <!--pull-right alone does not align social media icons adding text-right works for some reason-->

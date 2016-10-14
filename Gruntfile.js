@@ -22,27 +22,62 @@ module.exports = function (grunt) {
                 generateCheckstyleReport: 'w3cErrors/validation.xml',
                 path: 'w3cErrors/validation-status.json',
                 reportpath: false,
-                // remotePath: "http://decodize.com/",
-                // remoteFiles: ["html/slidemote-universal-remote-control-for-html5-presentations",
-                //               "GAE/linktomob-share-your-links-quickly-and-easily-on-mobile-devices/",
-                //               "html/getting-started-with-yeoman-1-dot-0-beta-on-windows/",
-                //               "html/moving-from-wordpress-to-octopress/",
-                //               "css/site-preloading-methods/",
-                //               "html/sublime-text-2-bidirectional-language-support-plugin/"]
-                // remoteFiles: "validation-files.json",
                 relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.',
                     'Element title must not be empty.']
             },
             files: {
                 src: 'index.html'
             }
+        },
+        responsive_images: {
+            myTask: {
+                options: {
+                    sizes: [{
+                        name: 'sm',
+                        width: 160,
+                        height: 120
+                    },{
+                        name: 'med',
+                        width: 320,
+                        height: 240
+                    },{
+                        name: 'large',
+                        width: 640
+                    },{
+                        name: "large",
+                        width: 1024,
+                        suffix: "_x2",
+                        quality: 60
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    // src: ['assets/**.{jpg,gif,png}'],
+                    src: 'website-html.jpg',
+                    cwd: 'src/images-src/',
+                    dest: 'images/'
+                }]
+            }
+        },
+        imagemin: {                          // Task
+            dynamic: {                         // Another target
+                options: {                       // Target options
+                    optimizationLevel: 3,
+                    svgoPlugins: [{ removeViewBox: false }],
+                    // use: [mozjpeg()]
+                },
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'src/images-src',                   // Src matches are relative to this path
+                    src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+                    dest: 'images/'                  // Destination path prefix
+                }]
+            }
         }
-
     });
 
      // Register our tasks
 
     grunt.registerTask('default', [
-         'validation', 'concat'
-    ]);
+         'validation', 'concat', 'responsive_images', 'imagemin']);
 };
