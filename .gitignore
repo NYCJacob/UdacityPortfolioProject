@@ -1,11 +1,12 @@
 # ignore src directory
 src/
 
-# ignore image file
-*.jpg
+# ignore validation npm logs folder
+w3Errors
 
 # ignore phpstorm config .idea directory
 .idea/
 
 # ignore w3c validator plugin folder (gruntfile puts all files in this folder)
-w3cErrors/
+w3cErrors/# ignore pdf
+*.pdf

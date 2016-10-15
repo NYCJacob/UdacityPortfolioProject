@@ -33,27 +33,37 @@ module.exports = function (grunt) {
             myTask: {
                 options: {
                     sizes: [{
-                        name: 'sm',
+                        name: 'mob-160',
                         width: 160,
-                        height: 120
+                        height: 40
                     },{
-                        name: 'med',
+                        name:'mob-320',
                         width: 320,
-                        height: 240
+                        height: 80
+                    }, {
+                        name: 'med-500',
+                        width: 500
                     },{
-                        name: 'large',
-                        width: 640
+                        name: 'large-800',
+                        width: 800,
                     },{
-                        name: "large",
-                        width: 1024,
-                        suffix: "_x2",
-                        quality: 60
-                    }]
+                        name: 'large-960',
+                        width: 960
+                    },{
+                        name: "large-1600",
+                        width: 1600,
+                        suffix: "_x2"
+                    },{
+                        name:"portrait-400",
+                        width: 400,
+                        height: 600
+                    }
+                    ]
                 },
                 files: [{
                     expand: true,
                     // src: ['assets/**.{jpg,gif,png}'],
-                    src: 'website-html.jpg',
+                    src: 'pexels-photo-code.jpg',
                     cwd: 'src/images-src/',
                     dest: 'images/'
                 }]
@@ -63,7 +73,7 @@ module.exports = function (grunt) {
             dynamic: {                         // Another target
                 options: {                       // Target options
                     optimizationLevel: 3,
-                    svgoPlugins: [{ removeViewBox: false }],
+                    svgoPlugins: [{ removeViewBox: false }]
                     // use: [mozjpeg()]
                 },
                 files: [{

@@ -13,6 +13,7 @@ body{
 header{
     font-family: "Roboto", sans-serif;
     border-bottom: .5em solid #7d97ad;
+    margin-bottom: 2em;
 }
 
 footer{
@@ -39,4 +40,6 @@ svg{
     margin-top: 0;
 }
 
-
+#banner-image{
+    padding: 0;
+}

@@ -11,7 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!--Custom Css-->
-    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
 
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -52,11 +52,16 @@
     </div>
     <section class="row">
             <picture id="banner-image" class="col-xs-12">
-                <source class="col-lg-12" media="(min-width: 800px)" sizes="100vw" srcset="images/website-html-large_2x 1020w,
-                                                                                images/website-html-large.jpg 640w" />
-                <source class="col-lg-12" media="(max-width: 799px)" sizes="100vw" srcset="images/website-html-sm.jpg 160w,
-                                        images/website-html-med.jpg 320w, images/website-html-large.jpg 640w" />
-                <img src="images/website-html-sm.jpg" alt="html code picture" sizes="(max-width: 480px) 100vw, (min-width: 800px) 66vw, (min-width: 1900px) 50vw" srcset="images/website-html-sm.jpg 160w, images/website-html-med.jpg 320w, images/website-html-large.jpg 640w"/>
+                <source media="(min-width: 800px)" class="center-block img-rounded" sizes="66vw"
+                        srcset="images/pexels-photo-code-large-1600_x2.jpg 1600w, images/pexels-photo-code-large-960.jpg 960w, images/pexels-photo-code-large-800.jpg 800w"/>
+                <source media="(max-width: 799px)" class="center-block img-rounded" sizes="66vw"
+                        srcset="images/pexels-photo-code-mob-160.jpg 160w, images/pexels-photo-code-mob-320.jpg 320w, images/pexels-photo-code-med-500.jpg 500w" />
+                <img src="images/pexels-photo-code-mob-160.jpg" class="center-block img-rounded" alt="html code picture" sizes="66vw"
+                    srcset="images/pexels-photo-code-large-960.jpg 960w,
+                    images/pexels-photo-code-large-800.jpg 800w,
+                    images/pexels-photo-code-med-500.jpg 500w,
+                    images/pexels-photo-code-mob-320.jpg 320w,
+                    images/pexels-photo-code-mob-160.jpg 160w"/>
             </picture>
 
         <!--<picture>-->
