@@ -32,17 +32,39 @@ module.exports = function (grunt) {
         responsive_images: {
             myTask: {
                 options: {
+                    aspectRatio: false,
                     sizes: [{
                         name: 'mob-160',
                         width: 160,
-                        height: 40
+                        height: 60
+                    },{
+                        name:'mob-212',
+                        width: 212,
+                        height: 80
+                    },{
+                        name:'mob-248',
+                        width: 248,
+                        height: 100
+                    },{
+                        name:'mob-275',
+                        width: 275,
+                        height: 120
                     },{
                         name:'mob-320',
                         width: 320,
-                        height: 80
+                        height: 120
                     }, {
                         name: 'med-500',
-                        width: 500
+                        width: 500,
+                        height: 250
+                    },{
+                        name:'mob-546',
+                        width: 546,
+                        height: 300
+                    },{
+                        name:'mob-658',
+                        width: 658,
+                        height: 300
                     },{
                         name: 'large-800',
                         width: 800,
