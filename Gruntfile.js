@@ -87,7 +87,7 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,                  // Enable dynamic expansion
-                    cwd: 'src/images-src',                   // Src matches are relative to this path
+                    cwd: 'images',                   // Src matches are relative to this path
                     src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
                     dest: 'images/'                  // Destination path prefix
                 }]
@@ -106,6 +106,17 @@ module.exports = function (grunt) {
             files: {
                 src: 'index.html'
             }
+        },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'css',
+                    src: 'styles.css',
+                    dest: 'css',
+                    ext: '.min.css'
+                }]
+            }
         }
 
     });
@@ -113,5 +124,5 @@ module.exports = function (grunt) {
      // Register our tasks
 
     grunt.registerTask('default', [
-         'concat', 'responsive_images', 'imagemin', 'validation']);
+         'concat', 'responsive_images', 'imagemin', 'validation', 'cssmin']);
 };
