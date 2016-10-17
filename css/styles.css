@@ -31,7 +31,7 @@ footer{
 }
 
 #name{
-    margin-top: 0;
+    margin-bottom: 0 !important;
     margin-top: 0 !important;
     font-size: 36px !important;   /*bootstrap value*/
     font-size: 5.4vw !important;  /*dynamic sizing */
@@ -135,6 +135,7 @@ footer{
     position:relative;
     border: none !important;
     padding-bottom: .1em; !important;
+    margin-bottom: 0; !important;
 }
 
 .caption{
