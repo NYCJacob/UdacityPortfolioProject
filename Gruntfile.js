@@ -15,20 +15,7 @@ module.exports = function (grunt) {
                 dest: 'js/deploy-script.js'
             }
         },
-        validation: { // Grunt w3c validation plugin
-            options: {
-                reset: grunt.option('reset') || false,
-                stoponerror:false,
-                generateCheckstyleReport: 'w3cErrors/validation.xml',
-                path: 'w3cErrors/validation-status.json',
-                reportpath: false,
-                relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.',
-                    'Element title must not be empty.']
-            },
-            files: {
-                src: 'index.html'
-            }
-        },
+        
         responsive_images: {
             myTask: {
                 options: {
@@ -105,11 +92,26 @@ module.exports = function (grunt) {
                     dest: 'images/'                  // Destination path prefix
                 }]
             }
+        },
+        validation: {
+            options: {
+                reset: grunt.option('reset') || false,
+                stoponerror: false,
+                relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'], //ignores these errors
+                generateReport: true,
+                errorHTMLRootDir: 'w3cErrors',
+                useTimeStamp: true,
+                errorTemplate: 'error_template.html'
+            },
+            files: {
+                src: 'index.html'
+            }
         }
+
     });
 
      // Register our tasks
 
     grunt.registerTask('default', [
-         'validation', 'concat', 'responsive_images', 'imagemin']);
+         'concat', 'responsive_images', 'imagemin', 'validation']);
 };
