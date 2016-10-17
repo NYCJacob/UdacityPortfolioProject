@@ -40,6 +40,18 @@ footer{
     /*padding: 0 !important;*/
 }
 
+
+h3{
+    font-size: 24px !important;   /*bootstrap value*/
+    font-size: 3.5vw !important;  /*dynamic sizing */
+    margin-top: .1em;
+}
+
+footer{
+    font-size: 14px !important;   /*bootstrap value*/
+    font-size: 2.3vw !important;  /*dynamic sizing */
+}
+
 svg{
     /*height: auto;*/
     /*padding-bottom: 90%;*/
@@ -63,4 +75,51 @@ svg{
 
 #banner-image{
     padding: 0;
+}
+
+
+/*.mid h2 {*/
+    /*font-family: 'Roboto', sans-serif;*/
+    /*font-weight: 900;*/
+    /*color: white;*/
+    /*text-transform: uppercase;*/
+    /*margin: 0;*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*!*font-size: 2rem;*!*/
+    /*transform: translate(-50%, -50%);*/
+    /*font-size: 30px !important;   !*bootstrap value*!*/
+    /*font-size: 9vw !important;  !*dynamic sizing *!*/
+/*}*/
+
+#featured-images h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 24px;   /*bootstrap value fallback*/
+    font-size: 8vw !important;  /*dynamic sizing */
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media all and (min-device-width: 720px){
+    #featured-images h2 {
+        font-size: 5vw !important;  /*dynamic sizing vw size not working at all sizes this @media */
+    }
+}
+
+@media all and (min-device-width: 960px){
+    #featured-images h2 {
+        font-size: 2.6vw !important;  /*dynamic sizing vw size not working at all sizes this @media */
+    }
+}
+
+
+.thumbnail{
+    position:relative;
+    border: none !important;
 }
