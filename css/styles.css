@@ -122,8 +122,8 @@ footer{
 .thumbnail{
     position:relative;
     border: none !important;
-    padding-bottom: .1em; !important;
-    margin-bottom: 0; !important;
+    padding-bottom: .1em !important;
+    margin-bottom: 0 !important;
 }
 
 .caption{
